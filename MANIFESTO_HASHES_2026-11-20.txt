@@ -1,0 +1,26 @@
+KONFIRMU — MANIFESTO DE HASHES (prova de autoria, 2026-11-20)
+Gerado por re-execução verificada. Convenção de verificação: sha256sum <ficheiro>.
+
+ORIGINAIS (Downloads):
+  3cfe80002b756a40b81ceeae1ff5bec58d55bc49b80303f94cb16164ac036277  GENESIS_STAMP_v4.json
+  7b0680f795d9614bf6de97dae507db3b21d61f99742753ef444565d0b32086a6  konfirmu_calc_v2.5.1.py
+  30af0da409c642b49cce8ad153c62918d6962ace06617170e19c012f7ca2a2d5  saida_demo_v2.5.txt
+  c76e981e6212ceb639b80604623bcd80e11fe9cb2e986e0f0e8d3646d7d78615  SAIDA_DEMO.txt
+
+SAÍDA REGENERADA HOJE (motor v2.5.1, Python 3.13.15, EXIT=0, TUDO VERDE 147/147):
+  fd47ca5e7eb20e37606febdbf56daf3de9f00ab339dee80123b1e0e0f22ce156  saida_nova_v2.5.1.txt
+
+PROVAS INTERNAS VERIFICADAS HOJE (não são autoria, são integridade):
+  selo genesis sha256: 3bb318dd28742a435a11032a6a00cb4103fe4b40666a9251b91c3ef253fd9296 (CONFERE, 1339 bytes canónicos)
+  corpo saida_demo_v2.5.txt: 26c3829df18a2ee4b027da3f944e59defb563d7524247fcd533809c9f42dda8e (CONFERE)
+  corpo SAIDA_DEMO.txt:      c9c201b145eaf83b41e0263de9f965b495a5cdb0527a7cba565b620badc2c6a5 (CONFERE)
+  corpo saida_nova_v2.5.1:  147bace57c892e16347981e593c458b45c974101eae4db30ef5545ddc8e39dc7 (CONFERE)
+
+O QUE ISTO NÃO GARANTE: hash interno prova que o ficheiro não foi mexido, não prova data nem autoria
+perante terceiros. Para isso: publicar ESTE manifesto num canal com timestamp que não controlas
+(git remoto público, notário eIDAS, blockchain) — a prova de autoria é a data da publicação, não o hash.
+
+Correção honesta registada a 2026-11-20: numa primeira verificação foi dito que os .txt não batiam com o
+próprio hash — erro do verificador na forma de cortar as linhas. Com a convenção exacta do motor
+(h256("\n".join(linhas))), os três ficheiros conferem. O que não confere é a versão do motor nos .txt
+(v2.5.0 nos antigos) contra o ficheiro atual (v2.5.1) — diferença de versão, não adulteração.

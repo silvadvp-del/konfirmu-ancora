@@ -1,0 +1,44 @@
+{
+  "genesis_record": {
+    "axioms": [
+      "P1_GUM_CORRELATED_METROLOGY",
+      "P2_THERMODYNAMIC_AND_QUANTUM_VETO",
+      "P3_HYBRID_PQC_SHAKE512_ED25519",
+      "P4_APPEND_ONLY_DETERMINISTIC_LEDGER",
+      "P5_SHAMIR_3_OF_5_NONCE_SINGLE_USE",
+      "P6_POLICY_ZERO_15D_FREEZE_HUMAN_TRIBUNAL",
+      "P7_VERSIONED_FORMULAS_MEDIDO_VS_ASSUMIDO",
+      "P8_LOTKA_VOLTERRA_HOMEOSTASIS",
+      "P9_ANTI_SYBIL_COMMUNITY_QUORUM_K5",
+      "P10_COMPLETE_CRYPTOGRAPHIC_LINEAGE",
+      "P11_INVERSE_BOTTLENECK_ELASTICITY",
+      "P12_TRIANGULATED_ORACLES_N3_UNCERTAINTY_BRAKE_85",
+      "P13_ANTI_GOODHART_MAD_BAND",
+      "P14_VITAL_VALVE_AND_2PCT_WORKER_REPAIR_FUND",
+      "P15_PONTO_NEUTRAL_ONE_HEALTH_PLANETARY_BOUNDARIES"
+    ],
+    "domains_verified": [
+      "ENERGY_SOLAR_MICROGRIDS",
+      "QUANTUM_SAFE_FINANCE_AND_TRADE",
+      "CIRCULAR_DEADSTOCK_AND_EWASTE",
+      "GLOBAL_SHIPPING_DCSA_HAZMAT_OFFSHORE",
+      "COOPERATIVE_ROBOTICS_SAFETY_KERNEL",
+      "SOVEREIGN_MEDICINE_AND_COLD_CHAIN",
+      "BIOCLIMATIC_HOUSING_AND_VERIFIED_WORK",
+      "DIRECT_CREATOR_CULTURE_AND_YOUTH_SPORT",
+      "FRUGAL_COMPUTING_AND_OPEN_SCIENCE"
+    ],
+    "honesty_boundary": "O_QUE_NAO_GARANTE: Mathematical truth supports human justice; it never replaces human conscience or judicial accountability.",
+    "license": "EUPL-1.2",
+    "mote": "Vamos recomeçar, mas desta vez bem feito.",
+    "origin_coordinates": "Hückelhoven/NRW (EU) <-> Geneva/Zug (CH) <-> Sovereign Africa",
+    "project": "KONFIRMU / FABLE OS",
+    "timestamp_utc": "2026-11-20T09:20:00Z",
+    "version": "v4.0-GENESIS-SEALED"
+  },
+  "canonical_byte_length": 1339,
+  "seals": {
+    "sha256": "3bb318dd28742a435a11032a6a00cb4103fe4b40666a9251b91c3ef253fd9296",
+    "shake256_512bit": "cedc5dce6eb2d9ca01b1ad0c15ef6929f9dc619a261bf4588ff534ce81ad2847763ffe36c27778386952f0009e7bc48e53dd2bcd444f4300ab7a9ffe7d77a034"
+  }
+}
