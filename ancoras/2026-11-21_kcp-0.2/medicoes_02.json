@@ -1,0 +1,37 @@
+{
+ "calc_versao": "2.5.1",
+ "python": "3.13.18",
+ "maquina": "x86_64",
+ "verify": {
+  "n": 20,
+  "todos_ok": true,
+  "adulterado_recusado": true,
+  "cpu_s_por_verify": 0.003871,
+  "sla_1s": true
+ },
+ "pegada_verify_local": {
+  "assumido": {
+   "potencia_W": 10.0,
+   "intensidade_gCO2e_por_kWh": 400.0
+  },
+  "energia_J": 0.038706,
+  "gco2e": 4.3e-06,
+  "alvo_da_ordem_gco2e": 1.7,
+  "razao_alvo_sobre_medido": 395000.0
+ },
+ "shamir_4_de_6": {
+  "camaras": [
+   "AFRICA",
+   "EUROPE",
+   "ASIA",
+   "AMERICAS",
+   "CIVIL_SOCIETY",
+   "SCIENCE"
+  ],
+  "quartetos_reconstroem": true,
+  "n_quartetos": 15,
+  "trios_nao_reconstroem": true,
+  "n_trios": 20
+ },
+ "p6_tem_RECONCILIADO": false
+}
