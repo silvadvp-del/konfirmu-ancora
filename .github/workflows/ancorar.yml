@@ -1,0 +1,54 @@
+name: ancorar
+# Carimba no OpenTimestamps (Bitcoin) cada ficheiro novo em ancoras/ e erratas/ e, a cada 3 horas,
+# junta aos carimbos a prova do bloco Bitcoin quando ela chega. Só lê a rede dos calendários OTS.
+on:
+  push:
+    branches: [main, 'claude/**']
+    paths: ['ancoras/**', 'erratas/**']
+  schedule:
+    - cron: '23 */3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ancorar
+  cancel-in-progress: false
+jobs:
+  ancorar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: cliente OpenTimestamps
+        run: pip install opentimestamps-client==0.8.0
+      - name: carimbar e actualizar
+        run: |
+          set +e
+          shopt -s nullglob
+          for f in ancoras/* erratas/*; do
+            case "$f" in *.ots|*.bak) continue ;; esac
+            if [ -f "$f" ] && [ ! -f "$f.ots" ]; then
+              ots stamp "$f" || echo "AVISO: carimbo falhou para $f"
+            fi
+          done
+          for o in ancoras/*.ots erratas/*.ots; do ots upgrade "$o"; done
+          rm -f ancoras/*.bak erratas/*.bak
+          for o in ancoras/*.ots erratas/*.ots; do
+            echo "== $o"
+            ots info "$o" | grep -E "verify " | sort | uniq -c
+          done
+          exit 0
+      - name: guardar
+        run: |
+          git config user.name "konfirmu-ancora[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A ancoras erratas
+          if git diff --cached --quiet; then echo "nada novo"; exit 0; fi
+          git commit -m "ancoras: carimbos OpenTimestamps (automático)"
+          for i in 1 2 3; do
+            if git pull --rebase && git push; then exit 0; fi
+            sleep 7
+          done
+          exit 1

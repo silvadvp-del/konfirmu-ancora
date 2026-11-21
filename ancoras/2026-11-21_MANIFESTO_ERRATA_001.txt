@@ -1,0 +1,18 @@
+KONFIRMU — MANIFESTO DE HASHES (errata 001, nota técnica N-001 e kit v2.9) — 2026-11-21
+Ordem do David de 21-11-2026, 02:52. Este ficheiro tem só hashes: é carimbado no OpenTimestamps
+ANTES de os textos e o código serem publicados neste repositório. Convenção: sha256sum <ficheiro>.
+
+a080299a28d327d98fbfab0f584124d885975befa15c979a244b56965548cf27  erratas/ERRATA-001_GENESE_2026-11-21.md
+16f88892e5700170ceccd8e35fc3331ee07ddcbe0493ad381e1db2ee9b1c6767  erratas/NOTA-TECNICA-KCP-N001_2026-11-21.md
+7cbbe28fe8b81db2aaa0a3272cb08ed7c6d64aa5d1dab48ab18452f8cc371e8c  kit_v2.9/base_v28.py
+ebbd7956b81a6f6b1a05766f4f6598ff522a93fae9dd9f3460a9feae865635f3  kit_v2.9/quorum_multibloco.py
+b0bb2e0c512fa7748a3b09ca58b913afbc742aa492c7eb459ee0b676dd57e37a  kit_v2.9/teste_quorum.py
+3f4c85e3dd4e8ef2bde324351c1ea0d6e3cc044e92f7c9a2bc095e8d14126c11  kit_v2.9/kcp_exacto.py
+4fb9cba51194bd6d3044ab412b8bd64b0ade611f8cbb1b797ed35a210ff69df8  kit_v2.9/teste_kcp_exacto.py
+2543362db0ddacbea127976c0d14f773c5b63ccef7335e70045e209ab3f69a5a  kit_v2.9/kcp_vetores_0.1.json
+
+Referência (não publicada aqui; arquivo OneDrive Konfirmu/11_ARTEFACTOS/2026-11-21_REDTEAM_TUDO_PARTE/):
+4000242c21a2ba9a04b6a2a3bee7d39c5971fadc5c2f77b5c51f67440cf76899  REDTEAM-2026-11-21.md
+
+O QUE ISTO NÃO GARANTE: o carimbo prova que estes ficheiros existiam à hora do bloco Bitcoin;
+não prova que o que dizem está certo, nem quem os escreveu.
