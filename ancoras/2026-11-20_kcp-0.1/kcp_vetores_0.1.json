@@ -1,0 +1,38 @@
+{
+ "chave_de_teste_sk_hex": "9a0313ed1ef26115a640697974b3d8bf70672abb3284832eb316d4475d3c8ac7",
+ "aviso": "chave PÚBLICA de teste: nunca usar em produção",
+ "claim": {
+  "kcp": "0.1",
+  "emissor": "konfirmu/v1/verificar",
+  "emitido_em": "2026-11-20T12:00:00Z",
+  "afirmacao_sha256": "20c0b97ded5b7243319956891e28dcd729a26595c8e1f42d0deddb289f2bc9de",
+  "veredicto": "VERIFICADO",
+  "facto_selado": {
+   "id": "KF-DEMO-001",
+   "facto": "A Bíblia de Gutenberg teve uma tiragem de cerca de 180 exemplares.",
+   "fonte": "https://www.loc.gov/exhibits/bibles/interactives/gutenberg/index.html",
+   "data": "2026-11-20",
+   "nao_garante": "o número exato não é conhecido; as estimativas vão de 158 a 180",
+   "hash": "e342337f0331c20ef72fa3c0d4b77a7eb39f8134abeacba6ed801aa85ca7aa52"
+  },
+  "o_que_nao_garante": "VERIFICADO quer dizer que a afirmação bate com uma ficha com fonte, não que a fonte é infalível.",
+  "numero_exemplo": 0.30000000000000004
+ },
+ "canonico_utf8": "{\"afirmacao_sha256\":\"20c0b97ded5b7243319956891e28dcd729a26595c8e1f42d0deddb289f2bc9de\",\"emissor\":\"konfirmu/v1/verificar\",\"emitido_em\":\"2026-11-20T12:00:00Z\",\"facto_selado\":{\"data\":\"2026-11-20\",\"facto\":\"A Bíblia de Gutenberg teve uma tiragem de cerca de 180 exemplares.\",\"fonte\":\"https://www.loc.gov/exhibits/bibles/interactives/gutenberg/index.html\",\"hash\":\"e342337f0331c20ef72fa3c0d4b77a7eb39f8134abeacba6ed801aa85ca7aa52\",\"id\":\"KF-DEMO-001\",\"nao_garante\":\"o número exato não é conhecido; as estimativas vão de 158 a 180\"},\"kcp\":\"0.1\",\"numero_exemplo\":0.3,\"o_que_nao_garante\":\"VERIFICADO quer dizer que a afirmação bate com uma ficha com fonte, não que a fonte é infalível.\",\"veredicto\":\"VERIFICADO\"}",
+ "canonico_sha256": "786fdc3d3fca3d6174753bf354dd329dac2088a56f78a9434d25a3d2f15dfa4a",
+ "canonico_bytes": 711,
+ "selo": {
+  "alg": "Ed25519+SHA-256",
+  "hash": "786fdc3d3fca3d6174753bf354dd329dac2088a56f78a9434d25a3d2f15dfa4a",
+  "pub": "02f458dd895d0b131f8017dba3997f728af0bb0da3e07fbb24107c58e8c2ae91",
+  "sig": "a41331a002dd4c9fdd2b075ad376a6aabb10fc6510a4bec5d0d2ac962281eddc8a92193bf9262a80b147eb927068d104009283497144d8edea56e3b1ea33a70b"
+ },
+ "negativo": {
+  "mudanca": "veredicto VERIFICADO -> SEM_COBERTURA",
+  "esperado": "NAO_VERIFICADO"
+ },
+ "conferido_com": {
+  "v2.5.1": "7b0680f795d9614bf6de97dae507db3b21d61f99742753ef444565d0b32086a6",
+  "v2.8": "69be3398bc70a7bc9ad38d71a90e0f129a4bd570bac6a2348a2cc01640aec784"
+ }
+}
