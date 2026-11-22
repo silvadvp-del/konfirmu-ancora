@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-# VERIFICAÇÃO BYTE-A-BYTE v2.1 (2026-11-22) — stdlib-only.
+# VERIFICAÇÃO BYTE-A-BYTE v2.1.1 (2026-11-22; desde a v2.1 só mudaram comentários) — stdlib-only.
 # Igual à v1 nos passos 1 a 3 (mesmo texto de saída) e acrescenta:
 #   PASSO 4  — o manifesto e os dois carimbos .ots conferem byte a byte com os hashes fixados;
 #   PASSO 4b — lê cada carimbo sem rede: o caminho até ao Bitcoin (bloco, transação, raiz de Merkle) tem de
 #              ser o fixado abaixo. Mostra-o por extenso para qualquer pessoa o conferir num explorador público;
-#   PASSO 0  — corre antes de tudo: o verificador põe-se à prova a si próprio (autovacina). Dá a si mesmo um
-#              carimbo certo e quatro estragados de propósito; se aceitar um estragado, ou ler mal o certo, ou se o
-#              SHA-256 da máquina falhar os vetores oficiais do NIST, diz que está estragado e não confere nada;
+#   PASSO 0  — corre antes de tudo: o verificador põe-se à prova a si próprio (autovacina). Dá a si mesmo 3 vetores
+#              do NIST, 2 carimbos certos e 5 estragados de propósito; se aceitar um estragado, ler mal um certo ou
+#              se o SHA-256 da máquina falhar um vetor do NIST, diz que está estragado e não confere nada;
 #   PASSO 5  — veredicto com código de saída: 0 = TUDO CONFERE · 1 = ALGO NÃO CONFERE · 2 = ERRO AO LER ·
 #              3 = O VERIFICADOR ESTÁ ESTRAGADO.
-# Porquê: a v1 escrevia «False» mas saía sempre com 0, e não lia o manifesto (relatório do anticorpo de
-# 2026-11-22). Quem só olha para o código de saída via sempre verde.
+# Porquê: quando um ponto não conferia, a v1 escrevia «False» e saía na mesma com 0; e não lia o manifesto
+# (relatório do anticorpo de 2026-11-22). Quem só olhava para o código de saída via verde.
 # O que não garante: este programa não fala com a rede. Que cada transação está mesmo no bloco indicado
 # confere-se num explorador público de Bitcoin ou com `ots verify` (precisa de um nó).
 import hashlib
@@ -168,8 +168,8 @@ genesis_record = {
 }
 
 
-# Autovacina: entradas que se sabe estarem certas ou erradas. O carimbo sintético (81 bytes, bloco 12345) e as suas
-# quatro versões estragadas foram conferidos a 22-11-2026 contra a biblioteca oficial opentimestamps 0.4.5.
+# Autovacina: entradas que se sabe estarem certas ou erradas. O carimbo sintético (81 bytes, bloco 12345), a versão
+# com o caminho mudado e as 5 estragadas foram conferidos a 22-11-2026 com a biblioteca oficial opentimestamps 0.4.5.
 VETORES_NIST = (
     (b"abc", "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"),
     (b"", "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"),
